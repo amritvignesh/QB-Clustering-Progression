@@ -71,7 +71,7 @@ twopcas %>%
   stat_ellipse(level=(2/3)) + 
   labs(x = paste0('PC1 (Accounts for ', variance_1, '% of Variance)'), 
        y = paste0('PC2 (Accounts for ', variance_2, '% of Variance)'), 
-       title = 'K-Means Cluster Differences for NFL QBs in the 2022 Season (100+ Pass Attempts)') +
+       title = 'K-Means Cluster Differences for NFL QBs (250+ Pass Attempts)') +
   theme(plot.title = element_text(size=14, hjust=0.5, face="bold"), axis.title = element_text(face="bold"))
 
 name_cluster <- data.frame(player = stats$player, season = stats$season, team = stats$team, cluster=kmeans_qbs$cluster)
